@@ -27,3 +27,6 @@ group selection dan frame selection sekilas memang memilki fungsi yang mirip kar
 - typography: fitur Typography berfungsi untuk mengatur dan memberikan style pada teks.
 - grid dan layout: fitur ini berfungsi untuk mengatur ukuran, posisi, rotasi dan banyak hal lain lagi pada layer atau frame.
 - bring to back dan send to back: fitur ini berfungsi untuk mengatur posisi depan dan belakang pada layer atau frame.
+
+
+   
