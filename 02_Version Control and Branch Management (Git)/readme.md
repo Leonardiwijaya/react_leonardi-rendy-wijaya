@@ -32,3 +32,4 @@ git branch dan checkout memiliki beberapa parameternya masing-masing dengan fung
 - git pull: untuk untuk menyatukan kode dari repository pada branch tertentu ke local repository.
 
 
+ Hasil Latihan dan Eksplorasi git di folder Screenshots
