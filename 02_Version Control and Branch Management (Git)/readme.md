@@ -31,3 +31,4 @@ git branch dan checkout memiliki beberapa parameternya masing-masing dengan fung
 - git fetch: untuk menampilkan perubahan branch terbaru.
 - git pull: untuk untuk menyatukan kode dari repository pada branch tertentu ke local repository.
 
+
