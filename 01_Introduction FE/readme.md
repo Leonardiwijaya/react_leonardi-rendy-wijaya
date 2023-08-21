@@ -1,6 +1,6 @@
 # Latihan - Introduction FE
 Link google docs: https://docs.google.com/document/d/1n9QpI5yOS-laQuUn_aECv2acXTXw7nIJrKanPAl2WWc/edit?usp=sharing
-
+   
 # Summary:
 1. front end developer adalah orang yang bertugas untuk membuat tampilan website atau aplikasi sesuai dengan ui/ux yang dibuat oleh designer ui/ux. selain membuat tampilan, seorang front end developer juga bertugas untuk mengatur client side, memelihara dan memperbaiki website, mengoptimasi kinerja website dan lain-lainnya. untuk menjadi seorang front end, hal-hal yang dapat harus dipelajari dapat dilihat melalui website roadmap sh front end.
 tidak semua hal pada website roadmap sh front end harus dipelajari untuk menjadi seorang front end karena hal itu tergantung kebutuhannya.
@@ -15,3 +15,6 @@ tidak semua hal pada website roadmap sh front end harus dipelajari untuk menjadi
     2. website security sekarang menggunakkan https untuk keamanan website.
     3. program yang memudahkan penggunanya dalam mengurus paket dengan memasang, menghapus, melacak dependensi, dan memperbarui paket perangkat lunak secara otomatis.
 
+# Latihan - Introduction FE
+Link google docs: https://docs.google.com/document/d/1n9QpI5yOS-laQuUn_aECv2acXTXw7nIJrKanPAl2WWc/edit?usp=sharing
+   
