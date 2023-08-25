@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <style>
+        label, select {
+            display: block;
+            margin-bottom: 7px;
+        }
+        .inline {
+            display: inline;
+        }
+        h1, h2 {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Product</h1>
+    <h2>Detail Product</h2>
+    <form>
+        <label for="name">Product name :</label>
+        <input id="name" type="text" minlength="6" maxlength="50" required>
+        <label for="category">Product Category :</label>
+        <select id="category">
+            <option></option>
+            <option value="">category</option>
+        </select>
+        <label id="freshness">Product Freshness :</label>
+        <div>
+            <input type="radio" id="brand" name="freshness" value="Brand New" required>
+            <label class="inline" for="brand">Brand New</label>
+        </div>
+        <div>
+            <input type="radio" id="second" name="freshness" value="Second Hank">
+            <label class="inline" for="second">Second Hank</label>
+        </div>
+        <div>
+            <input type="radio" id="refurbished" name="freshness" value="Refurbished">
+            <label class="inline" for="refurbished">Refurbished</label>
+        </div>
+        <label class="inline" for="image">Image of Product</label>
+        <input type="file" id="image" required>
+        <label for="description">Additional Description</label>
+        <textarea style="resize:none" id="description" cols="35" rows="7"></textarea>
+        <label>Product price : </label>
+        <input style="width: 55px; margin-bottom: 5px; text-align: center;" type="number" value="100" required><br>
+        <input type="submit" id="Submit">
+    </form>
+</body>
+</html>
