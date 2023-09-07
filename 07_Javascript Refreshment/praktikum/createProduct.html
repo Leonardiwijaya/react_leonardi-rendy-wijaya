@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Create Product</title>
+    <style>
+        header .navbar-brand {
+            font-family: Roboto;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        section {
+            width: 936px !important;
+        }
+        #create-product {
+            padding-bottom: 64px;
+        }
+        #create-product img {
+            display: block;
+            height: 57px;
+            width: 72px;
+            margin: auto;
+            margin: 58px auto 23px auto;
+        }
+        #create-product h1 {
+            font-family: Roboto;
+            font-size: 31px;
+            font-weight: 700;
+            line-height: 38px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+        #create-product p {
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+        section h2 {
+            font-family: Roboto;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        #detail-product {
+            width: 656px;
+        }
+        #detail-product textarea {
+            height: 116px;
+            resize: none;
+        }
+        #productName {
+            width: 282px;
+        }
+        #productCategory {
+            width: 224px;
+        }
+        #productImage {
+            width: 242px;
+        }
+        #detail-product button{
+            display: block;
+            margin: auto;
+            margin-top: 122px;
+            width: 90%;
+        }
+        .error {
+          color: red;
+          font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Simple header</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><button type="button" class="btn btn-primary">Home</button></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active">About</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="container">
+            <div class="container-fluid row-cols-1" id="create-product">
+                <img src="assets/bootstrap-logo.svg.png" alt="">
+                <h1>Create Product</h1>
+                <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+            </div>
+            <div class="container" id="detail-product">
+                <form class="row-cols-1">
+                    <h2>Detail Product</h2>
+                    <div class="mb-3" id="productNameDiv">
+                      <label for="productName" class="form-label">Product name</label>
+                      <input type="text" class="form-control" id="productName" oninput="update('productName')">
+                    </div>
+                    <div class="mb-3" id="productCategoryDiv" onchange="update('productCategory')">
+                        <label for="productCategory" class="form-label">Product Category</label>
+                        <select id="productCategory" class="form-select">
+                          <option disabled selected value> -- select an option -- </option>
+                          <option value="choose">Choose...</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="productImageDiv">
+                        <label for="productImage" class="form-label">Image of Product</label>
+                        <input type="file" class="form-control border border-primary btn-outline-primary" id="productImage" oninput="update('productImage')">
+                    </div>
+                      <div id="productFreshnessDiv">
+                        <label>Product Freshness</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" oninput="update('productFreshness')">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Brand New
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" oninput="update('productFreshness')">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Second Hand
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" oninput="update('productFreshness')">
+                          <label class="form-check-label" for="flexRadioDefault3">
+                            Refufbished
+                          </label>
+                        </div>
+                      </div>
+                      <div class="mb-3" id="additionalDescriptionDiv">
+                        <label for="additional" class="form-label">Additional Description</label>
+                        <textarea class="form-control" id="additionalDescription" oninput="update('additionalDescription')"></textarea>
+                      </div>
+                      <div class="mb-3" id="productPriceDiv">
+                        <label for="productPrice" class="form-label">Product price</label>
+                        <input type="number" class="form-control" id="productPrice" oninput="update('productPrice')">
+                      </div>
+                    <button onclick="validation()" class="btn btn-primary" id="submitButton" type="button">Submit</button>
+                  </form>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="createProduct.js">
+    </script>
+</body>
+</html>
