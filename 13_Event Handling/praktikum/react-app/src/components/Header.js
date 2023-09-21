@@ -28,7 +28,7 @@ export class Header extends React.Component {
               <ul className="navbar-nav align-items-center">
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
-                    <button type="button" className="btn btn-primary">
+                    <button type="button" className="btn btn-primary" onClick={this.props.randomNumber}>
                       Home
                     </button>
                   </a>
