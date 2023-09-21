@@ -1,40 +1,37 @@
-import { React, Component} from "react";
+import { React, Component, useState } from "react";
 
-export default class Form extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      productNameLength: 0
-    }
+export default function Form(props) {
+  const [productNameLength, setProductNameLength] = useState(0);
 
-  } 
-  handleChange = (event) => {
-    this.setState ({
-        productNameLength: event.target.value.length
-      });
-  }
-  handleSubmit = (event) => {
-    if (this.state.productNameLength === 0) {
-      alert('Please enter a valid product name.');
-    }
-  }
-  render() {
-    return (
+  const handleChange = (event) => {
+    return setProductNameLength(event.target.value.length);
+  };
+  const handleSubmit = (event) => {
+    // if (productNameLength === 0) {
+    //   alert("Please enter a valid product name.");
+    // }
+  };
+  return (
+    <>
       <div className="container" id="detail-product">
-        <form className="row-cols-1">
-          <h2>{this.props.formName}</h2>
-          <TextInput label="ProductName" validate={this.handleChange} style={this.state.productNameLength > 25 ? {border: '1px solid red'} : null}></TextInput>
-          {this.state.productNameLength > 25 && errorMessage()}
+        <form className="row-cols-1" onSubmit={props.onSubmit}>
+          <h2>{props.formName}</h2>
+          <TextInput
+            label="ProductName"
+            validate={handleChange}
+            style={productNameLength > 25 ? { border: "1px solid red" } : null}
+          ></TextInput>
+          {productNameLength > 25 && errorMessage()}
           <SelectInput label="Product Category"></SelectInput>
           <FileInput label="Image of Product"></FileInput>
           <RadioInput label="Product Freshness"></RadioInput>
           <TextareaInput label="Additional Description"></TextareaInput>
           <NumberInput label="Product Price"></NumberInput>
-          <Button validate={this.handleSubmit}></Button>
+          <Button></Button>
         </form>
       </div>
-    );
-  }
+    </>
+  );
 }
 
 class TextInput extends Component {
@@ -48,6 +45,7 @@ class TextInput extends Component {
           type="text"
           className="form-control"
           id="text-input"
+          name="name"
           onChange={this.props.validate}
           style={this.props.style}
         />
@@ -62,13 +60,12 @@ class SelectInput extends Component {
       <div
         className="mb-3"
         id="productCategoryDiv"
-        onchange="update('productCategory')"
       >
         <label htmlFor="productCategory" className="form-label">
           {this.props.label}
         </label>
-        <select id="select-input" className="form-select">
-          <option disabled="" selected="" value="">
+        <select id="select-input" className="form-select" name="category">
+          <option disabled="" value="">
             {" "}
             -- select an option --{" "}
           </option>
@@ -89,7 +86,6 @@ class FileInput extends Component {
           type="file"
           className="form-control border border-primary btn-outline-primary"
           id="file-input"
-          oninput="update('productImage')"
         />
       </div>
     );
@@ -105,9 +101,9 @@ class RadioInput extends Component {
           <input
             className="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+            name="freshness"
             id="flexRadioDefault1"
-            oninput="update('productFreshness')"
+            value="Brand New"
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
             Brand New
@@ -117,9 +113,9 @@ class RadioInput extends Component {
           <input
             className="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+            name="freshness"
             id="flexRadioDefault2"
-            oninput="update('productFreshness')"
+            value="Second Hand"
           />
           <label className="form-check-label" htmlFor="flexRadioDefault2">
             Second Hand
@@ -129,9 +125,9 @@ class RadioInput extends Component {
           <input
             className="form-check-input"
             type="radio"
-            name="flexRadioDefault"
+            name="freshness"
             id="flexRadioDefault3"
-            oninput="update('productFreshness')"
+            value="Refufbished"
           />
           <label className="form-check-label" htmlFor="flexRadioDefault3">
             Refufbished
@@ -152,7 +148,6 @@ class TextareaInput extends Component {
         <textarea
           className="form-control"
           id="textarea-input"
-          oninput="update('additionalDescription')"
           defaultValue={""}
         />
       </div>
@@ -171,7 +166,7 @@ class NumberInput extends Component {
           type="number"
           className="form-control"
           id="number-input"
-          oninput="update('productPrice')"
+          name="price"
         />
       </div>
     );
@@ -179,18 +174,20 @@ class NumberInput extends Component {
 }
 
 function Button(props) {
-    return (
-      <button
-        className="btn btn-primary"
-        id="submitButton"
-        type="submit"
-        onClick={props.validate}
-      >
-        Submit
-      </button>
-    );
+  return (
+    <button
+      className="btn btn-primary"
+      id="submitButton"
+      type="submit"
+      onClick={props.validate}
+    >
+      Submit
+    </button>
+  );
 }
 
-function errorMessage(){
-  return <p style={{color: "red"}}>Last Name must not exceed 25 characters.</p>
+function errorMessage() {
+  return (
+    <p style={{ color: "red" }}>Last Name must not exceed 25 characters.</p>
+  );
 }
