@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Compentece</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="container d-flex justify-content-between">
+
+        <div class="logo mr-auto">
+            <h1 class="text-light"><a href="index.html">Trav</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+            <li class="active"><a href="#header">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#catalog">Catalog</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+
+            <li class="get-started"><a href="#about">Get Started</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="pt-5 pb-2" style="border: 1px solid white;">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1">
+                    <h1>Your new travel experience with Trav</h1>
+                    <h2>We will make your travel experience great</h2>
+                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                    <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6 order-1 order-lg-2 hero-img">
+            <img src="assets/img/contact-us.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2" style="color: #434343;">
+            <h2>Contact Us</h2>
+            <form style="border: 1px solid block;">
+              <div class="form-group pb-2">
+                <label for="firstname">First name</label>
+                <input type="firtname" class="form-control" id="firstname" placeholder="First name">
+              </div>
+              <div class="form-group pb-2">
+                <label for="lastname">Last name</label>
+                <input type="lastname" class="form-control" id="lastname" placeholder="Last name">
+              </div>
+              <div class="form-group pb-2">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+              <div class="form-group pb-2">
+                <label for="message">What can we help you with?</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+              <button type="button" onclick=alertForm() class="btn btn-primary mt-2" style="background-color: #85E6C5;border: none;">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center text-lg-start text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h3 class="text-uppercase mb-4 font-weight-bold">
+                Trav
+              </h3>
+              <h5>
+                Your new travel experience with Trav. 
+                We will make your travel experience great
+              </h5>
+            </div>
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Useful links
+              </h6>
+              <p>
+                <a class="text-white">About Us</a>
+              </p>
+              <p>
+                <a class="text-white">Services</a>
+              </p>
+              <p>
+                <a class="text-white">Team</a>
+              </p>
+              <p>
+                <a class="text-white">Contact Us</a>
+              </p>
+            </div>
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p><i class="fas fa-home mr-3"></i> Medan, Sumatera Utara</p>
+              <p><i class="fas fa-envelope mr-3"></i> wijayaleonardi5@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> 0823 6697 1420</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!--Grid row-->
+        </section>
+
+        <hr class="my-3">
+  
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+              <div class="p-3">
+                © 2023 Copyright:
+                <a class="text-white">Trav</a>
+              </div>
+            </div>
+            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white"role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+</body>
+</html>
