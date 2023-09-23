@@ -20,3 +20,4 @@ Single Page Application (SPA) adalah salah satu jenis aplikasi website dimana ha
 attribute component merupakan suatu komponen yang akan ditampilkan kepada user saat mengakses path yang didefinisikan.
 
 - Link digunakan untuk berpindah antar halaman, property to tersebut merujuk pada path di route yang akan dituju
+
