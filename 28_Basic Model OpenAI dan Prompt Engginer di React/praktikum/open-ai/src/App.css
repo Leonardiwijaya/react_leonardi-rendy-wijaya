@@ -70,3 +70,6 @@ main {
   height: 20px;
   margin-left: 5px;
 }
+button {
+  margin-right: 5px;
+}
